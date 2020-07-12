@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fs1344\\SSO-BASE-NOVO\\SSO-BASE-NOVO.csproj": {}
+    "/home/edjaine/Documentos/Fontes/POC/SSO-BASE-NOVO/SSO-BASE-NOVO.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fs1344\\SSO-BASE-NOVO\\SSO-BASE-NOVO.csproj": {
+    "/home/edjaine/Documentos/Fontes/POC/SSO-BASE-NOVO/SSO-BASE-NOVO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fs1344\\SSO-BASE-NOVO\\SSO-BASE-NOVO.csproj",
+        "projectUniqueName": "/home/edjaine/Documentos/Fontes/POC/SSO-BASE-NOVO/SSO-BASE-NOVO.csproj",
         "projectName": "SSO-BASE-NOVO",
-        "projectPath": "C:\\Users\\fs1344\\SSO-BASE-NOVO\\SSO-BASE-NOVO.csproj",
-        "packagesPath": "C:\\Users\\fs1344\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fs1344\\SSO-BASE-NOVO\\obj\\",
+        "projectPath": "/home/edjaine/Documentos/Fontes/POC/SSO-BASE-NOVO/SSO-BASE-NOVO.csproj",
+        "packagesPath": "/home/edjaine/.nuget/packages/",
+        "outputPath": "/home/edjaine/Documentos/Fontes/POC/SSO-BASE-NOVO/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\fs1344\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/edjaine/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,9 +36,29 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
-            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+            "AspNetCore.Identity.MongoDbCore": {
               "target": "Package",
-              "version": "[1.10.9, )"
+              "version": "[2.1.1, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "MongoDB.Driver.Core": {
+              "target": "Package",
+              "version": "[2.9.3, )"
+            },
+            "NSwag.AspNetCore": {
+              "target": "Package",
+              "version": "[13.6.2, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.7.1, )"
             }
           },
           "imports": [
@@ -61,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.301/RuntimeIdentifierGraph.json"
         }
       }
     }
