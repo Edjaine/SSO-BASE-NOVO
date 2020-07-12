@@ -1,0 +1,10 @@
+C:\Users\fs1344\SSO-BASE-NOVO\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\fs1344\SSO-BASE-NOVO\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\fs1344\SSO-BASE-NOVO\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\fs1344\SSO-BASE-NOVO\bin\Debug\netcoreapp3.1\SSO-BASE-NOVO.exe
+C:\Users\fs1344\SSO-BASE-NOVO\obj\Debug\netcoreapp3.1\SSO-BASE-NOVO.csprojAssemblyReference.cache
+C:\Users\fs1344\SSO-BASE-NOVO\obj\Debug\netcoreapp3.1\SSO-BASE-NOVO.AssemblyInfoInputs.cache
+C:\Users\fs1344\SSO-BASE-NOVO\obj\Debug\netcoreapp3.1\SSO-BASE-NOVO.AssemblyInfo.cs
+C:\Users\fs1344\SSO-BASE-NOVO\obj\Debug\netcoreapp3.1\SSO-BASE-NOVO.RazorTargetAssemblyInfo.cache
+C:\Users\fs1344\SSO-BASE-NOVO\obj\Debug\netcoreapp3.1\staticwebassets\SSO-BASE-NOVO.StaticWebAssets.Manifest.cache
+C:\Users\fs1344\SSO-BASE-NOVO\obj\Debug\netcoreapp3.1\staticwebassets\SSO-BASE-NOVO.StaticWebAssets.xml

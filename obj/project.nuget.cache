@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "+PYddT8ljJmmJS3uTXvhQodywcpi3wu3pcbUvaoh78u8eehdptxBZjs6IG5jmzAP7zIc7mkifXrafh0qXlWb3w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\fs1344\\SSO-BASE-NOVO\\SSO-BASE-NOVO.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\fs1344\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512"
+  ],
+  "logs": []
+}
