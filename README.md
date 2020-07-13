@@ -15,8 +15,10 @@
 <h5>Como usar</h5>
 <p>Para utilização durante o desenvolvimento local pode ser executado no Docker</p>
 <ul>
-  <li>1 - Criando a rede interna docker >> docker network create --driver bridge rede-integrada</li>
-  <li>2 - Criando o banco de dados em uma container >> docker run --name mongo -p 27017:27017 --network rede-integrada --network-alias mongo-db   bitnami/mongodb:latest 
-</li>
-  <li>3 - Criando a Imagem e executando o container com API</li>
+  <li>1 - Criando a rede interna docker >> 
+     <strong>docker network create --driver bridge rede-integrada  </strong></li>
+  <li>2 - Criando o banco de dados em uma container >> 
+    <strong>docker run --name mongo -p 27017:27017 --network rede-integrada --network-alias mongo-db   bitnami/mongodb:latest   </strong></li>
+  <li>3 - Criando a Imagem e executando o container com API >> 
+      <strong>docker-compose up --build </strong></li>
 </ul>
