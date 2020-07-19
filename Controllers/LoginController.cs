@@ -10,6 +10,7 @@ using Microsoft.IdentityModel.Tokens;
 using MongoDbGenericRepository;
 using sso_base.Models;
 using sso_base.Service;
+using SSO_BASE_NOVO.Dto;
 
 namespace sso_base.Controllers {
 
@@ -26,13 +27,13 @@ namespace sso_base.Controllers {
         }
 
         [HttpPost ("Criar")]
-        public async Task<IActionResult> CreateUser (string usuario, string email, string senha) {
+        public async Task<IActionResult> CreateUser ([FromBody] UsuarioDto usuarioDto) {
 
-            await _authService.CriaUsuario (usuario, email, senha);
+            await _authService.CriaUsuario (usuarioDto.Usuario, usuarioDto.Email, usuarioDto.Senha);
             return Ok ("Criado com sucesso");
         }
 
-        [HttpPost ("Logar")]
+        [HttpGet("Logar")]
         public async Task<IActionResult> Login (string usuario, string senha) {
 
             try {
