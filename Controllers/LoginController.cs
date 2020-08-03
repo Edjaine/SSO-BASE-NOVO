@@ -28,9 +28,17 @@ namespace sso_base.Controllers {
 
         [HttpPost ("Criar")]
         public async Task<IActionResult> CreateUser ([FromBody] UsuarioDto usuarioDto) {
-
-            await _authService.CriaUsuario (usuarioDto.Usuario, usuarioDto.Email, usuarioDto.Senha);
-            return Ok ("Criado com sucesso");
+            
+            try
+            {
+                await _authService.CriaUsuario (usuarioDto.Usuario, usuarioDto.Email, usuarioDto.Senha);
+                return Ok ("Criado com sucesso");
+            }
+            catch(Exception ex)
+            {
+                ModelState.AddModelError( string.Empty, ex.Message.ToString ());
+                return BadRequest(ModelState);
+            }
         }
 
         [HttpGet("Logar")]
