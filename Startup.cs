@@ -25,7 +25,11 @@ namespace SSO_BASE_NOVO {
             var mongoDbContext = new MongoDbContext (Configuration.GetConnectionString ("DefaultConnection"),
                 "SSO-MODELO");
 
-            services.AddSwaggerDocument ();
+            services.AddSwaggerDocument ( o => {
+                o.DocumentName = "SSO-BASE";
+                o.Title = "SSO-BASE";
+                o.Description = "Modelo base de SSO para ser usado como template";
+            });
 
             services.AddScoped<IAuthService, AuthService> ();
 
@@ -41,7 +45,9 @@ namespace SSO_BASE_NOVO {
             }
 
             app.UseOpenApi ();
-            app.UseSwaggerUi3 ();
+            app.UseSwaggerUi3 (o => {
+                o.DocumentTitle = "SSO-BASE";                
+            });
 
             app.UseHttpsRedirection ();
 
