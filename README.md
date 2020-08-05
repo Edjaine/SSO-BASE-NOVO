@@ -10,6 +10,8 @@ Facilitar a implentação de camada de segurança que poderá ser consumida por 
   - MongoDb
   - Swagger
   - Docker
+  - Healthcheck
+  
 ### Como usar
 Para utilização durante o desenvolvimento local pode ser executado no Docker.
   1. Criando a rede interna docker.
@@ -24,3 +26,4 @@ Para utilização durante o desenvolvimento local pode ser executado no Docker.
   ```bash
       docker-compose up --build
   ```
+  4. Dashboard do healthcheck está disponível em http://localhost:2000/healthchecks-ui#/healthchecks
