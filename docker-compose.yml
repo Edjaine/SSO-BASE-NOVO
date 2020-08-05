@@ -2,6 +2,8 @@ version: '3.4'
 
 services:
   SSO-BASE:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
     image: sso-base
     build:
       context: .
