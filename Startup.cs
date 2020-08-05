@@ -107,7 +107,7 @@ namespace SSO_BASE_NOVO {
             });
 
             // Ativa o dashboard para a visualização da situação de cada Health Check
-            app.UseHealthChecksUI();
+            app.UseHealthChecksUI( s => s.AddCustomStylesheet("dotnet.css"));
             
             app.UseEndpoints (endpoints => {
                 endpoints.MapControllers();
