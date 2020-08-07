@@ -6,7 +6,7 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
     image: sso-base
     build:
-      context: .
+      context: API/.
       dockerfile: dockerfile
     ports:
       - "2000:80"

@@ -107,6 +107,15 @@
           "build/_._": {}
         }
       },
+      "Bogus/30.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Bogus.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Bogus.dll": {}
+        }
+      },
       "coverlet.collector/1.2.0": {
         "type": "package",
         "build": {
@@ -4023,6 +4032,23 @@
         "lib/netstandard2.0/BoDi.dll",
         "lib/netstandard2.0/BoDi.pdb",
         "tools/_._"
+      ]
+    },
+    "Bogus/30.0.2": {
+      "sha512": "EhygcI3BnJZU1o6bQDmCaYg4WjvFpcmwUZO6UWdF72+0RF1rbXRVh9vTaev0TEszsrtlnd2W5QEK7x4xZiw3EQ==",
+      "type": "package",
+      "path": "bogus/30.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "bogus.30.0.2.nupkg.sha512",
+        "bogus.nuspec",
+        "lib/net40/Bogus.dll",
+        "lib/net40/Bogus.xml",
+        "lib/netstandard1.3/Bogus.dll",
+        "lib/netstandard1.3/Bogus.xml",
+        "lib/netstandard2.0/Bogus.dll",
+        "lib/netstandard2.0/Bogus.xml"
       ]
     },
     "coverlet.collector/1.2.0": {
@@ -11464,6 +11490,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Bogus >= 30.0.2",
       "Microsoft.AspNetCore.Mvc.Testing >= 3.1.6",
       "Microsoft.NET.Test.Sdk >= 16.5.0",
       "SSO-BASE-NOVO >= 1.0.0",
@@ -11513,6 +11540,10 @@
     "frameworks": {
       "netcoreapp3.1": {
         "dependencies": {
+          "Bogus": {
+            "target": "Package",
+            "version": "[30.0.2, )"
+          },
           "Microsoft.AspNetCore.Mvc.Testing": {
             "target": "Package",
             "version": "[3.1.6, )"

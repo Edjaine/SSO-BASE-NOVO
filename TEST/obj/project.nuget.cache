@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "mrNbIm4Fs5rBcx/rJ4G8k0Cye2x4PnqjcfdhZKfCfx0uzxX/9iQzQO/kEkmEm+tyH3YUtxJM+U2fU2jGA4FPFA==",
+  "dgSpecHash": "JWYBMdYw1gBndwTzq6sAfVw+QPwDUJ2mRRIGOJbR1xQ/iAPwaW0JMM6PQwZkCf3c5vNjkPIpQyvX13wRPo8CJA==",
   "success": true,
   "projectFilePath": "/home/edjaine/Documentos/Fontes/POC/SSO-BASE-NOVO/TEST/TEST.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,7 @@
     "/home/edjaine/.nuget/packages/aspnetcore.healthchecks.ui.inmemory.storage/3.1.1/aspnetcore.healthchecks.ui.inmemory.storage.3.1.1.nupkg.sha512",
     "/home/edjaine/.nuget/packages/aspnetcore.identity.mongodbcore/2.1.1/aspnetcore.identity.mongodbcore.2.1.1.nupkg.sha512",
     "/home/edjaine/.nuget/packages/bodi/1.4.1/bodi.1.4.1.nupkg.sha512",
+    "/home/edjaine/.nuget/packages/bogus/30.0.2/bogus.30.0.2.nupkg.sha512",
     "/home/edjaine/.nuget/packages/coverlet.collector/1.2.0/coverlet.collector.1.2.0.nupkg.sha512",
     "/home/edjaine/.nuget/packages/cucumber.messages/6.0.1/cucumber.messages.6.0.1.nupkg.sha512",
     "/home/edjaine/.nuget/packages/dnsclient/1.2.0/dnsclient.1.2.0.nupkg.sha512",

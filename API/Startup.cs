@@ -25,19 +25,11 @@ namespace SSO_BASE_NOVO {
     public class Startup {
         public Startup (IConfiguration configuration) {
             Configuration = configuration;
-        
-            _testConfiguration = new ConfigurationBuilder()
-                .AddJsonFile("appsettings.Testing.json")
-                .Build();
-
         }
         public IConfiguration Configuration { get; }
-        private readonly IConfiguration _testConfiguration;
-        public void ConfigureServices (IServiceCollection services) {
+        public void ConfigureServices (IServiceCollection services) {            
 
-            
-
-            var mongoDbContext = new MongoDbContext (Configuration.GetConnectionString ("DefaultConnection"),
+            var mongoDbContext = new MongoDbContext (Configuration.GetConnectionString ("Mongo"),
                 "SSO-MODELO");
 
             services.AddSwaggerDocument ( o => {
@@ -49,10 +41,10 @@ namespace SSO_BASE_NOVO {
 
             services.AddHealthChecks()
                 .AddMongoDb(name: "Mongo Aplicação",
-                        mongodbConnectionString : Configuration.GetConnectionString ("DefaultConnection"));
+                        mongodbConnectionString : Configuration.GetConnectionString ("Mongo"));
              services.AddHealthChecks()
                 .AddMongoDb(name: "Mongo Teste",
-                        mongodbConnectionString : _testConfiguration.GetConnectionString ("DefaultConnection"));
+                        mongodbConnectionString : Configuration.GetConnectionString ("MongoTeste"));
             
             
             services.AddHealthChecksUI()

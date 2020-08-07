@@ -23,8 +23,7 @@ namespace sso_base.Service {
         }
         public async Task<IdentityResult> CriaUsuario (string usuario, string email, string senha) {
             var user = new ApplicationUser { UserName = usuario, Email = usuario };
-            var result = await _userManager.CreateAsync(user, senha);
-            return result;
+            return await _userManager.CreateAsync(user, senha);            
         }
 
         public async Task<UserToken> Loga (string usuario, string senha) {

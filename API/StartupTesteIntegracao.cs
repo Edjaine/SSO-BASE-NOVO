@@ -26,26 +26,15 @@ namespace SSO_BASE_NOVO {
         public StartupTesteIntegracao (IConfiguration configuration) {
             Configuration = configuration;
         
-            _testConfiguration = new ConfigurationBuilder()
+            Configuration = new ConfigurationBuilder()
                 .AddJsonFile("appsettings.Testing.json")
                 .Build();
-
         }
         public IConfiguration Configuration { get; }
-        private readonly IConfiguration _testConfiguration;
-        public void ConfigureServices (IServiceCollection services) {
+        public void ConfigureServices (IServiceCollection services) {            
 
-            
-
-            var mongoDbContext = new MongoDbContext (Configuration.GetConnectionString ("DefaultConnection"),
-                "SSO-MODELO");
-
-            services.AddSwaggerDocument ( o => {
-                o.DocumentName = "SSO-BASE";
-                o.Title = "SSO-BASE";
-                o.Description = "Modelo base de SSO para ser usado como template";
-            });            
-
+            var mongoDbContext = new MongoDbContext (Configuration.GetConnectionString ("Mongo"),
+                "SSO-MODELO");    
 
             services.AddScoped<IAuthService, AuthService> ();
 
@@ -58,17 +47,9 @@ namespace SSO_BASE_NOVO {
         public void Configure (IApplicationBuilder app, IWebHostEnvironment env) {
             if (env.IsDevelopment ()) {
                 app.UseDeveloperExceptionPage ();
-            }
+            } 
 
-            app.UseOpenApi ();
-            app.UseSwaggerUi3 (o => {
-                o.DocumentTitle = "SSO-BASE";                
-            });
-
-            //app.UseHttpsRedirection ();
-
-            app.UseRouting ();
-       
+            app.UseRouting ();      
 
             app.UseCors(c =>
             {
@@ -77,14 +58,11 @@ namespace SSO_BASE_NOVO {
                 c.AllowAnyOrigin();
             });
             
-            app.UseAuthorization ();           
-            
+            app.UseAuthorization ();                       
                
             app.UseEndpoints (endpoints => {
                 endpoints.MapControllers();
             });
-
         }
-
     }
 }

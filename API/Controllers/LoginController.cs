@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using MongoDbGenericRepository;
+using Newtonsoft.Json;
 using sso_base.Models;
 using sso_base.Service;
 using SSO_BASE_NOVO.Dto;
@@ -28,33 +29,33 @@ namespace sso_base.Controllers {
 
         [HttpPost ("Criar")]
         public async Task<IActionResult> CreateUser ([FromBody] UsuarioDto usuarioDto) {
-            
-            try
-            {
-                await _authService.CriaUsuario (usuarioDto.Usuario, usuarioDto.Email, usuarioDto.Senha);
-                return Ok ("Criado com sucesso");
-            }
-            catch(Exception ex)
-            {
-                ModelState.AddModelError( string.Empty, ex.Message.ToString ());
-                return BadRequest(ModelState);
-            }
+
+            try {
+                var resposta = await _authService.CriaUsuario (usuarioDto.Usuario, usuarioDto.Email, usuarioDto.Senha);
+                return Ok(resposta);                
+            } catch (Exception ex) { 
+                return BadRequest (ex.Message);
+            }         
         }
 
-        [HttpGet("Logar")]
+        [HttpGet ("Logar")]
         public async Task<IActionResult> Login (string usuario, string senha) {
 
             try {
                 return Ok (await _authService.Loga (usuario, senha));
             } catch (Exception ex) {
-                ModelState.AddModelError (string.Empty, ex.Message.ToString ());
-                return BadRequest (ModelState);
+                return BadRequest (ex.Message);
             }
 
         }
-        [HttpGet("Echo")]
-        public IActionResult Echo() {
-            return Ok("It's Alive!!!!");
+
+        [HttpGet ("Echo")]
+        public IActionResult Echo () {
+            return Ok ("It's Alive!!!!");
+        }
+        [HttpPost ("EchoPost")]
+        public string EchoPost () {
+            return "It's Alive!!!!";
         }
 
     }
