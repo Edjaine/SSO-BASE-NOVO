@@ -22,8 +22,9 @@ Para utilização durante o desenvolvimento local pode ser executado no Docker.
   ```
   2. Criando duas instâncias do banco de dados em containes, sendo que o primeiro será usado ela aplicação e o segundo será usado para testar os recursos. 
   ```bash
-    docker run --name mongo -p 27017:27017 --network rede-integrada --network-alias mongo-local  bitnami/mongodb:latest
-    docker run --name mongo -p 28017:27017 --network rede-integrada --network-alias mongo-local-teste bitnami/mongodb:latest
+docker run --name mongo -p 27017:27017 -d --network rede-integrada --network-alias mongo-local bitnami/mongodb:latest && 
+docker run --name mongo -p 28017:27017 -d --network rede-integrada --network-alias mongo-local-teste bitnami/mongodb:latest
+
   ```
   3. Criando a Imagem e executando o container com API.
   ```bash
